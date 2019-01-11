@@ -1,0 +1,839 @@
+{
+	"info": {
+		"_postman_id": "bc6f58d9-e9b6-44b3-8496-be4ffca939a4",
+		"name": "Perf_Red_AWS",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Search",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Accept",
+						"value": "application/json"
+					},
+					{
+						"key": "Content-Type",
+						"value": "application/json"
+					},
+					{
+						"key": "channelCode",
+						"value": "MC"
+					},
+					{
+						"key": "subChannelCode",
+						"value": "RM"
+					},
+					{
+						"key": "GUIID",
+						"value": "guiid"
+					},
+					{
+						"key": "locale",
+						"value": "en-US"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{ \r\n   \"propertyCode\":\"SOSBW\",\r\n   \"checkInDate\":\"2018-09-19\",\r\n   \"checkOutDate\":\"2018-09-20\",\r\n   \"numberOfRooms\": \"1\",\r\n   \"numberOfGuests\": \"1\",\r\n   \"roomAttributes\":[ \r\n      \r\n   ],\r\n   \"ratePlanType\":[ \r\n      \"13.RPT\"\r\n   ],\r\n   \r\n \"ratePlanCategory\":[\"\"],\r\n   \"matchingCriteria\":\"all\",\r\n   \r\n   \"rewardsProfile\":{ \r\n      \"rewardsNumber\":\"\",\r\n      \"rewardsLevel\":\"\",\r\n      \"profilePreferences\":[ \r\n         \"\"\r\n      ]\r\n   },\r\n   \"agent\":[   {\r\n    \"type\": \"7\",\r\n    \"id\": \"N74022\",\r\n    \"locationCode\": \"\"   \r\n    }\r\n    ],\r\n   \r\n   \"includeTaxesandFees\":true,\r\n   \"reservationConfirmationNumber\":\"\"\r\n}  \r\n"
+				},
+				"url": {
+					"raw": "http://search.dsp-perf2.ose-perf2-red.aws-use1.cloud.marriott.com/v1/shop/roomProducts",
+					"protocol": "http",
+					"host": [
+						"search",
+						"dsp-perf2",
+						"ose-perf2-red",
+						"aws-use1",
+						"cloud",
+						"marriott",
+						"com"
+					],
+					"path": [
+						"v1",
+						"shop",
+						"roomProducts"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "LAR",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Accept",
+						"value": "application/json"
+					},
+					{
+						"key": "Content-Type",
+						"value": "application/json"
+					},
+					{
+						"key": "channelCode",
+						"value": "MC"
+					},
+					{
+						"key": "subChannelCode",
+						"value": "RM"
+					},
+					{
+						"key": "GUIID",
+						"value": "dsp321"
+					},
+					{
+						"key": "locale",
+						"value": "en-US"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n\"propertyCodes\":[ \r\n\"MSYMM\",\"BOSCO\"\r\n],\r\n\"checkInDate\":\"2018-10-01\",\r\n\"checkOutDate\":\"2018-10-02\",\r\n\"numberOfRooms\":\"1\",\r\n\"numberOfGuests\":\"1\",\r\n\"ratePlanType\":[ \r\n\"13.RPT\"\r\n],\r\n\"roomAttributes\":[ \r\n\"\"\r\n],\r\n\"matchingCriteria\":\"\",\r\n\"rewardsProfile\":\r\n{ \"rewardsNumber\":\"\", \"rewardsLevel\":\"\", \"profilePreferences\":[ \"\" ] }\r\n,\r\n\"agent\": [\r\n{ \"type\": \"7\", \"id\": \"\" }\r\n],\r\n\"includeNonDspRates\":false\r\n}"
+				},
+				"url": {
+					"raw": "http://lar.dsp-perf2.ose-perf2-red.aws-use1.cloud.marriott.com/v1/shop/roomProductsLAR",
+					"protocol": "http",
+					"host": [
+						"lar",
+						"dsp-perf2",
+						"ose-perf2-red",
+						"aws-use1",
+						"cloud",
+						"marriott",
+						"com"
+					],
+					"path": [
+						"v1",
+						"shop",
+						"roomProductsLAR"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "ADF",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Accept",
+						"value": "application/json"
+					},
+					{
+						"key": "Content-Type",
+						"value": "application/json"
+					},
+					{
+						"key": "channelCode",
+						"value": "MC"
+					},
+					{
+						"key": "subChannelCode",
+						"value": "RM"
+					},
+					{
+						"key": "GUIID",
+						"value": "guiid"
+					},
+					{
+						"key": "locale",
+						"value": "en-US"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n \"propertyCode\":\"MOBBR\",\r\n \"startDate\":\"2018-10-01\",\r\n \"endDate\":\"2018-10-02\",\r\n \"numberOfRooms\":\"1\",\r\n \"numberOfGuests\":\"1\",\r\n \"numberOfNights\":\"1\",\r\n \"ratePlanType\":\"13.RPT\" ,\r\n \"ratePlanCategory\":\"\",\r\n \"roomAttributeCodes\":[\r\n  \r\n ],\r\n \"rewardsProfile\":{      \r\n      \"rewardsNumber\":\"\",\r\n      \"rewardsLevel\":\"\",\r\n      \"profilePreferences\":[ \r\n         \"\"\r\n      ]\r\n   },\r\n \"agent\":[ {\r\n    \"type\": \"7\",\r\n    \"id\": \"N74022\",\r\n    \"locationCode\": \"\"\r\n    }],\r\n   \"includeNonDspRates\":true\r\n } "
+				},
+				"url": {
+					"raw": "http://adf.dsp-perf2.ose-perf2-red.aws-use1.cloud.marriott.com/v1/shop/BOSCO/lowestRateCalendar",
+					"protocol": "http",
+					"host": [
+						"adf",
+						"dsp-perf2",
+						"ose-perf2-red",
+						"aws-use1",
+						"cloud",
+						"marriott",
+						"com"
+					],
+					"path": [
+						"v1",
+						"shop",
+						"BOSCO",
+						"lowestRateCalendar"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Tax&fee",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Accept",
+						"value": "application/json"
+					},
+					{
+						"key": "Content-Type",
+						"value": "application/json"
+					},
+					{
+						"key": "channelCode",
+						"value": "MC"
+					},
+					{
+						"key": "subChannelCode",
+						"value": "RM"
+					},
+					{
+						"key": "GUIID",
+						"value": "guiid"
+					},
+					{
+						"key": "locale",
+						"value": "en-US"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n  \"propertyCode\": \"MOBBR\",\r\n  \"checkInDate\": \"2018-10-01\",\r\n  \"checkOutDate\": \"2018-10-02\",\r\n  \"numberOfRooms\": 1,\r\n  \"numberOfGuests\": 1,\r\n  \"roomProduct\": \r\n  {\r\n    \"id\": \"D000000021\",\r\n    \"name\": \"\",\r\n    \"description\": \"GUEST ROOM,TWO QUEEN BEDS,SEPERATE TUB\",\r\n    \"roomPool\": \"QNQN\",\r\n    \"dspRate\": true,\r\n    \"numberOfFreeNights\": 2,\r\n    \"rateDetails\": {\r\n      \"nearSellOut\": \"false\",\r\n      \"platinumOverride\": \"false\",\r\n      \"stayType\": \"StandardRates\",\r\n      \"originCurrency\": \"USD\",\r\n      \"numberOfDecimals\": 2,\r\n      \"localeNumberOfDecimals\": 0,\r\n      \"ratePlans\": [{\r\n                            \"ratePlanType\": \"24.RPT\",\r\n                            \"rateOfferType\": \"\",\r\n                            \"ratePlanID\": \"RP1RO91103MM\",\r\n                            \"memberRatePlanSource\": \"RP1RO91103\",\r\n                            \"memberRate\": true,\r\n                            \"maxAllowedPreferences\": \"12\",\r\n                            \"currentPreferenceCount\": 2,\r\n                            \"priceViewableInd\": true,\r\n                            \"qualifiedRate\": true,\r\n                            \"propertySellOnly\": false,\r\n                            \"rateTimeUnit\": \"Day\",\r\n                            \"effectiveDate\": \"2018-10-01\",\r\n                            \"expireDate\": \"2018-10-02\",\r\n                            \"baseRate\": 18500,\r\n                            \"totalPrice\": 18500,\r\n                            \"unAdjustedTotalPrice\": 18500,\r\n                            \"originCurrency\": \"USD\",\r\n                            \"numberOfDecimals\": 2,\r\n                            \"rateType\": \"24.RPT\",\r\n                            \"rateDescription\": [\r\n                                {\r\n                                    \"rateDescriptionCode\": \"6\",\r\n                                    \"description\": \"Marriott Rewards Member Rate\"\r\n                                }\r\n                            ],\r\n                            \"marketCode\": \"12XDRZ\",\r\n                            \"proxyRateProgram\": \"XDRZ\",\r\n                            \"marketSegmentCode\": \"12\",\r\n                            \"commissionableFlag\": false,\r\n                            \"commissionablePercent\": 0,\r\n                            \"matchingRoomAttributes\": [\r\n                                {\r\n                                    \"attributeCode\": \"BMBT0006\",\r\n                                    \"marshaSrcCode\": \"Q3\",\r\n                                    \"categoryCode\": 4,\r\n                                    \"positionInCategory\": \"5\",\r\n                                    \"requestStatus\": \"Purchased\",\r\n                                    \"attributePrice\": 0,\r\n                                    \"unAdjustedAttributePrice\": 0\r\n                                },\r\n                                {\r\n                                    \"attributeCode\": \"WSTS0002\",\r\n                                    \"marshaSrcCode\": \"K0\",\r\n                                    \"categoryCode\": 12,\r\n                                    \"positionInCategory\": \"2\",\r\n                                    \"requestStatus\": \"Purchased\",\r\n                                    \"attributePrice\": 0,\r\n                                    \"unAdjustedAttributePrice\": 0\r\n                                },\r\n                                {\r\n                                    \"attributeCode\": \"ROOM0006\",\r\n                                    \"marshaSrcCode\": \"\",\r\n                                    \"categoryCode\": 1,\r\n                                    \"positionInCategory\": \"1\",\r\n                                    \"requestStatus\": \"Purchased\",\r\n                                    \"attributePrice\": 18500,\r\n                                    \"unAdjustedAttributePrice\": 18500\r\n                                }\r\n                            ]\r\n      }]\r\n    }\r\n  },\r\n  \"agent\":\r\n[{ \"type\":\"5\", \"id\":\"24628063\", \"locationCode\":\"\" }]\r\n}"
+				},
+				"url": {
+					"raw": "http://taxfee.dsp-perf2.ose-perf2-red.aws-use1.cloud.marriott.com/v1/shop/taxesandfees",
+					"protocol": "http",
+					"host": [
+						"taxfee",
+						"dsp-perf2",
+						"ose-perf2-red",
+						"aws-use1",
+						"cloud",
+						"marriott",
+						"com"
+					],
+					"path": [
+						"v1",
+						"shop",
+						"taxesandfees"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "ADDON",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Accept",
+						"value": "application/json"
+					},
+					{
+						"key": "Content-Type",
+						"value": "application/json"
+					},
+					{
+						"key": "channelCode",
+						"value": "MC"
+					},
+					{
+						"key": "subChannelCode",
+						"value": "RM"
+					},
+					{
+						"key": "GUIID",
+						"value": "guiid"
+					},
+					{
+						"key": "locale",
+						"value": "en-US"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{ \r\n  \"propertyCode\":\"MOBBR\",\r\n  \"checkInDate\":\"2018-11-16\",\r\n  \"checkOutDate\":\"2018-11-17\",\r\n  \"numberOfRooms\":\"1\",\r\n  \"numberOfGuests\":\"1\",\r\n   \"roomTypeCode\":\"GENR\",\r\n   \"dspRate\":false\r\n}\r\n"
+				},
+				"url": {
+					"raw": "http://addon.dsp-perf2.ose-perf2-red.aws-use1.cloud.marriott.com/v1/shop/roomType/addOns",
+					"protocol": "http",
+					"host": [
+						"addon",
+						"dsp-perf2",
+						"ose-perf2-red",
+						"aws-use1",
+						"cloud",
+						"marriott",
+						"com"
+					],
+					"path": [
+						"v1",
+						"shop",
+						"roomType",
+						"addOns"
+					]
+				},
+				"description": "http://addon.dsp-int1.ose-nonprod-sldc.marriott.com/v1/shop/roomType/addOns "
+			},
+			"response": []
+		},
+		{
+			"name": "Room Types List",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json"
+					},
+					{
+						"key": "GUIID",
+						"value": "103"
+					},
+					{
+						"key": "locale",
+						"value": "en-US"
+					},
+					{
+						"key": "channelCode",
+						"value": "MC"
+					},
+					{
+						"key": "subChannelCode",
+						"value": "RM"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": ""
+				},
+				"url": {
+					"raw": "http://hdi.dsp-perf2.ose-perf2-red.aws-use1.cloud.marriott.com/v1/shop/WASGN/roomTypesList",
+					"protocol": "http",
+					"host": [
+						"hdi",
+						"dsp-perf2",
+						"ose-perf2-red",
+						"aws-use1",
+						"cloud",
+						"marriott",
+						"com"
+					],
+					"path": [
+						"v1",
+						"shop",
+						"WASGN",
+						"roomTypesList"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Room Type Details",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json"
+					},
+					{
+						"key": "GUIID",
+						"value": "1234567"
+					},
+					{
+						"key": "locale",
+						"value": "en-US"
+					},
+					{
+						"key": "channelCode",
+						"value": "MC"
+					},
+					{
+						"key": "subChannelCode",
+						"value": "RM"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{ \r\n   \"propertyCode\":\"MOBBR\",\r\n   \"roomTypeCode\":\"D000000002\",\r\n   \"dspRate\":\"true\"\r\n}\r\n"
+				},
+				"url": {
+					"raw": "http://rtd.dsp-perf2.ose-perf2-red.aws-use1.cloud.marriott.com/v1/shop/roomDetails",
+					"protocol": "http",
+					"host": [
+						"rtd",
+						"dsp-perf2",
+						"ose-perf2-red",
+						"aws-use1",
+						"cloud",
+						"marriott",
+						"com"
+					],
+					"path": [
+						"v1",
+						"shop",
+						"roomDetails"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "HDI GET",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json"
+					},
+					{
+						"key": "GUIID",
+						"value": "103"
+					},
+					{
+						"key": "locale",
+						"value": "en-US"
+					},
+					{
+						"key": "channelCode",
+						"value": "MC"
+					},
+					{
+						"key": "subChannelCode",
+						"value": "RM"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": ""
+				},
+				"url": {
+					"raw": "http://iurs.dsp-perf2.ose-perf2-vxbyr.marriott.com/v1/HDI/BOSCO/20181101/20181102",
+					"protocol": "http",
+					"host": [
+						"iurs",
+						"dsp-perf2",
+						"ose-perf2-vxbyr",
+						"marriott",
+						"com"
+					],
+					"path": [
+						"v1",
+						"HDI",
+						"BOSCO",
+						"20181101",
+						"20181102"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "BRS",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Accept",
+						"value": "application/json"
+					},
+					{
+						"key": "Content-Type",
+						"value": "application/json"
+					},
+					{
+						"key": "channelCode",
+						"value": "MC"
+					},
+					{
+						"key": "subChannelCode",
+						"value": "RM"
+					},
+					{
+						"key": "GUIID",
+						"value": "guiid"
+					},
+					{
+						"key": "locale",
+						"value": "en-US"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n  \"propertyCode\": \"MSYMM\",\r\n    \"hotelCodeContext\":\"Marriott\",\r\n    \"checkInDate\": \"2018-07-18\",\r\n  \"checkOutDate\": \"2018-07-19\",\r\n    \"numberOfRooms\": \"1\",\r\n    \"numberOfGuests\": \"1\",\r\n    \"guestAges\": [{\r\n      \"age\": 14,\r\n      \"count\": 1,\r\n      \"bucket\": \"\"\r\n    }],\r\n    \"agent\": [\r\n    {\r\n    \"type\": \"7\",\r\n    \"id\": \"\",\r\n    \"locationCode\": \"\"\r\n    }],\r\n    \r\n    \"endTransaction\": \"validate\",\r\n     \r\n    \r\n    \"billingLocationCode\": \"\",\r\n    \"syncThirdParty\":false,\r\n    \"reunify\":\"true\",\r\n    \"rewardsProfile\":{ \r\n      \"rewardsNumber\":\"\",\r\n      \"rewardsLevel\":\"\",\r\n      \"profilePreferences\":[]\r\n    },\r\n       \"roomProducts\":[\r\n          {\r\n      \"id\": \"D000000038\",\r\n      \"name\": \"\",\r\n      \"description\":\"CORNER ROOM,City View,KING BED,LARGE GUEST ROOM,REFRIGERATOR,TUB/SHOWER\",\r\n      \"roomPoolCode\": \"DLUX\",\r\n      \"roomPoolOverride\":false,\r\n      \"eliteAvailability\": false,\r\n      \"platinumOverride\": false,\r\n      \"rph\":1,\r\n      \"dspRate\": true,\r\n       \"rateDetails\": {\r\n       \"ratePlans\": [\r\n                   {\r\n        \"ratePlanCode\": \"RP1RO91103MM\",\r\n        \"tripPurpose\": \"BUSINESS\",\r\n        \"rateOverride\": false,\r\n        \"startDate\": \"2018-07-18\",\r\n        \"endDate\": \"2018-07-19\",\r\n        \"baseRate\": 14100,\r\n        \"totalPrice\": 14100,\r\n        \"unAdjustedTotalPrice\": 14100,\r\n        \"originCurrency\": \"USD\",\r\n        \"numberOfDecimals\": 2,\r\n        \"rateDescriptionCode\": \"6\",\r\n        \"rateDescription\": \"Marriott Rewards Member Rate\",\r\n        \"rateTimeUnit\": \"Day\",\r\n        \"marketCode\": \"10XDRZ\",\r\n        \"proxyRateProgram\": \"XDRZ\",\r\n        \"marketSegmentCode\": \"10\",\r\n        \"commissionableFlag\": false,\r\n        \"forceSellRatePlan\": false,\r\n        \"matchingRoomAttributes\":\r\n  [\r\n                {\r\n                  \"attributeCode\": \"PCRN0002\",\r\n                  \"marshaSrcCode\": \"C6\",\r\n                  \"categoryCode\": 6,\r\n                  \"positionInCategory\": \"2\",\r\n                  \"requestStatus\": \"Purchased\",\r\n                  \"attributePrice\": 0,\r\n                  \"unAdjustedAttributePrice\": 0,\r\n                  \"categoryClass\": \"RoomType\"\r\n                },\r\n                {\r\n                  \"attributeCode\": \"AREF0003\",\r\n                  \"marshaSrcCode\": \"\",\r\n                  \"categoryCode\": 11,\r\n                  \"positionInCategory\": \"3\",\r\n                  \"requestStatus\": \"Purchased\",\r\n                  \"attributePrice\": 0,\r\n                  \"unAdjustedAttributePrice\": 0,\r\n                  \"categoryClass\": \"RoomType\"\r\n                },\r\n                {\r\n                  \"attributeCode\": \"VWTR0016\",\r\n                  \"marshaSrcCode\": \"W8\",\r\n                  \"categoryCode\": 3,\r\n                  \"positionInCategory\": \"2\",\r\n                  \"requestStatus\": \"Purchased\",\r\n                  \"attributePrice\": 1000,\r\n                  \"unAdjustedAttributePrice\": 1000,\r\n                  \"categoryClass\": \"RoomType\"\r\n                },\r\n                {\r\n                  \"attributeCode\": \"VCT002\",\r\n                  \"marshaSrcCode\": \"K0\",\r\n                  \"categoryCode\": 12,\r\n                  \"positionInCategory\": \"1\",\r\n                  \"requestStatus\": \"Purchased\",\r\n                  \"attributePrice\": 0,\r\n                  \"unAdjustedAttributePrice\": 0,\r\n                  \"categoryClass\": \"RoomType\"\r\n                },\r\n                {\r\n                  \"attributeCode\": \"BMBN0006\",\r\n                  \"marshaSrcCode\": \"K1\",\r\n                  \"categoryCode\": 4,\r\n                  \"positionInCategory\": \"2\",\r\n                  \"requestStatus\": \"Purchased\",\r\n                  \"attributePrice\": 0,\r\n                  \"unAdjustedAttributePrice\": 0,\r\n                  \"categoryClass\": \"RoomType\"\r\n                },\r\n                {\r\n                  \"attributeCode\": \"ROOM0003\",\r\n                  \"marshaSrcCode\": \"\",\r\n                  \"categoryCode\": 1,\r\n                  \"positionInCategory\": \"2\",\r\n                  \"requestStatus\": \"Purchased\",\r\n                  \"attributePrice\": 14100,\r\n                  \"unAdjustedAttributePrice\": 14100,\r\n                  \"categoryClass\": \"RoomType\"\r\n                }\r\n              ]\r\n       \r\n        }\r\n                ]\r\n             }\r\n          }\r\n       ],\r\n         \r\n      \"guestInformation\": [\r\n      {\r\n         \"primary\": true,\r\n         \"rph\": 1,\r\n         \"arrivalTime\": \"10:20:00\",\r\n         \"namePrefix\": \"Mr\",\r\n         \"firstName\": \"MARY\",\r\n         \"lastName\": \"ROE\",\r\n         \"guestCount\": \"1\",\r\n         \"pmsInfo\": {\r\n            \"type\": 1,\r\n            \"id\": \"28622\",\r\n            \"context\": \"PMS\"\r\n         },\r\n         \"emailAddress\": [\r\n           {\r\n               \"primary\": true,\r\n               \"emailAddress\": \"john.doe@hotmail.com\",\r\n               \"format\": \"\"\r\n            }\r\n         ],\r\n         \"telephones\": [\r\n            {\r\n               \"primary\": true,\r\n               \"countryAccessCode\": \"001\",\r\n               \"telephoneNumber\": \"8989898989\",\r\n               \"telephoneLocationType\": \"6.PLT\",\r\n               \"telephoneTechType\": \"5.PTT\",\r\n               \"extension\": \"\",\r\n              \"sms\": true\r\n            }\r\n         ],\r\n         \"address\": [\r\n            {\r\n               \"primary\": \"true\",\r\n               \"addressType\": \"1.CLT\",\r\n               \"companyName\": \"asdf\",\r\n               \"streetAddress1\": \"1816 SKIPPERS ROW\",\r\n               \"streetAddress2\": \"\",\r\n               \"city\": \"GIBSON ISLAND\",\r\n               \"state\": \"MD\",\r\n               \"stateProvince\": \"MD\",\r\n               \"countryCode\": \"US\",\r\n               \"zipCode\": \"210561116\"\r\n            }\r\n         ]\r\n      }\r\n   ],\r\n   \r\n   \"guaranteeMethod\": [\r\n      {\r\n         \"startDate\": \"2018-07-18\",\r\n         \"endDate\": \"2018-07-19\",\r\n         \"guaranteeTypeCode\": \"5.PMT\",\r\n         \"bankId\": \"American Express\",\r\n         \"cardHoldersName\": \"John Doe\",\r\n         \"cardCode\": \"AX\",\r\n         \"cardNumber\": \"341111599241000\",\r\n         \"maskedCardNumber\": \"2522505318721856\",\r\n         \"expiryDate\": \"1221\",\r\n         \"rph\":1,\r\n          \"remark\": \"Requested\"\r\n      }\r\n   ],\r\n   \"comments\": [\r\n      {\r\n         \"guestViewable\": \"true\",\r\n         \"paragraphNumber\": \"1\",\r\n         \"text\": \"DSP check\"\r\n      }\r\n   ],\r\n   \"writtenConfInstLanguage\": \"US\"\r\n    }"
+				},
+				"url": {
+					"raw": "http://brs.dsp-perf2.ose-perf2-vxbyr.marriott.com/v1/book/buildReservation",
+					"protocol": "http",
+					"host": [
+						"brs",
+						"dsp-perf2",
+						"ose-perf2-vxbyr",
+						"marriott",
+						"com"
+					],
+					"path": [
+						"v1",
+						"book",
+						"buildReservation"
+					]
+				},
+				"description": "DSP"
+			},
+			"response": []
+		},
+		{
+			"name": "IRS",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json"
+					},
+					{
+						"key": "GUIID",
+						"value": "1234567"
+					},
+					{
+						"key": "locale",
+						"value": "en"
+					},
+					{
+						"key": "channelCode",
+						"value": "MC"
+					},
+					{
+						"key": "subChannelCode",
+						"value": "RM"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n   \"echoToken\":\"595800BF\",\r\n   \"primaryLanguage\":\"en\",\r\n   \"alternateLanguage\":\"en\",\r\n   \"verificationData\":{\r\n      \"type\":\"14\",\r\n      \"id\":\"ABCD1234\",\r\n      \"id_context\":\"Marriott\"\r\n   }\r\n}"
+				},
+				"url": {
+					"raw": "http://irs.dsp-perf2.ose-perf2-red.aws-use1.cloud.marriott.com/v1/session/5A980087",
+					"protocol": "http",
+					"host": [
+						"irs",
+						"dsp-perf2",
+						"ose-perf2-red",
+						"aws-use1",
+						"cloud",
+						"marriott",
+						"com"
+					],
+					"path": [
+						"v1",
+						"session",
+						"5A980087"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "VHAP",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Accept",
+						"value": "application/json"
+					},
+					{
+						"key": "Content-Type",
+						"value": "application/json"
+					},
+					{
+						"key": "channelCode",
+						"value": "MC"
+					},
+					{
+						"key": "subChannelCode",
+						"value": "RM"
+					},
+					{
+						"key": "GUIID",
+						"value": "guiid"
+					},
+					{
+						"key": "locale",
+						"value": "en-US"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n\"GUIID\":\"\",\r\n\"simplifiedRules\":true,\r\n\"propertyCode\":\"BOSCO\",\r\n\"checkInDate\":\"2018-08-21\",\r\n\"checkOutDate\":\"2018-08-22\",\r\n\"type\":\"\",\r\n\"reservationNumber\":\"\",\r\n\"reservationNumberContext\":\"\",\r\n\"forceSellIndicator\":\"\",\r\n\"numberOfRooms\":1,\r\n\"numberOfGuests\":1,\r\n\"guestAges\":[\r\n{ \"age\":12, \"count\":1, \"bucket\":\"\" }\r\n],\r\n\"rewardsProfile\":\r\n{ \"rewardsNumber\":\"\", \"rewardsLevel\":\"\", \"profilePreferences\":[ \"\" ] }\r\n,\r\n\"roomProduct\":{\r\n\"id\":\"GENR\",\r\n\"roomPool\":\"GENR\",\r\n\"eliteAvailability\":\"\",\r\n\"dspRate\":false,\r\n\"roomNumber\":1,\r\n\"rateDetails\":{\r\n\"ratePlans\":[\r\n{\r\n\"proxyRateProgram\":\"\",\r\n\"ratePlanCode\":\"APND\",\r\n\"rateOverride\":\"\",\r\n\"startDate\":\"2018-08-21\",\r\n\"endDate\":\"2018-08-22\",\r\n\"rateTimeUnit\":\"Day/fullduration\",\r\n\"originCurrency\":\"USD\",\r\n\"numberOfDecimals\":2,\r\n\"baseRate \":17800,\r\n\"totalPrice\":17800\r\n}\r\n]\r\n}\r\n},\r\n\"agent\": [{\r\n    \"type\": \"2\",\r\n    \"id\": \"GEABI330\",\r\n    \"locationCode\": \"OMAZZ\"\r\n    }]\r\n}"
+				},
+				"url": {
+					"raw": "http://vhap.dsp-perf2.ose-perf2-red.aws-use1.cloud.marriott.com/v1/products/termsAndConditions",
+					"protocol": "http",
+					"host": [
+						"vhap",
+						"dsp-perf2",
+						"ose-perf2-red",
+						"aws-use1",
+						"cloud",
+						"marriott",
+						"com"
+					],
+					"path": [
+						"v1",
+						"products",
+						"termsAndConditions"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Resolve-Room",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Accept",
+						"value": "application/json"
+					},
+					{
+						"key": "Content-Type",
+						"value": "application/json"
+					},
+					{
+						"key": "channelCode",
+						"value": "MC"
+					},
+					{
+						"key": "subChannelCode",
+						"value": "RM"
+					},
+					{
+						"key": "GUIID",
+						"value": "1234567"
+					},
+					{
+						"key": "locale",
+						"value": "en-US"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n  \"propertyCode\": \"MOBRV\",\n  \"currencyCode\": \"USD\",\n  \"numberOfDecimals\": 2,\n  \"unresolvedRoomTypes\": [\n    {\n      \"roomType\": \"D000000003\",\n      \"totalPrice\": 300\n    },\n    {\n      \"roomType\": \"D000000037\",\n      \"totalPrice\": 300\n    },\n    {\n      \"roomType\": \"D000000036\",\n      \"totalPrice\": 300\n    },\n    {\n      \"roomType\": \"D000000035\",\n      \"totalPrice\": 300\n    },\n    {\n      \"roomType\": \"D000000034\",\n      \"totalPrice\": 300\n    },\n    {\n      \"roomType\": \"D000000033\",\n      \"totalPrice\": 300\n    },\n    {\n      \"roomType\": \"D000000032\",\n      \"totalPrice\": 300\n    },\n    {\n      \"roomType\": \"D000000031\",\n      \"totalPrice\": 300\n    },\n    {\n      \"roomType\": \"D000000030\",\n      \"totalPrice\": 300\n    },\n    {\n      \"roomType\": \"D000000029\",\n      \"totalPrice\": 300\n    },\n    {\n      \"roomType\": \"D000000028\",\n      \"totalPrice\": 300\n    },\n    {\n      \"roomType\": \"D000000027\",\n      \"totalPrice\": 300\n    },\n    {\n      \"roomType\": \"D000000062\",\n      \"totalPrice\": 300\n    },\n    {\n      \"roomType\": \"D000000061\",\n      \"totalPrice\": 300\n    },\n    {\n      \"roomType\": \"D000000060\",\n      \"totalPrice\": 300\n    },\n    {\n      \"roomType\": \"D000000059\",\n      \"totalPrice\": 300\n    },\n    {\n      \"roomType\": \"D000000058\",\n      \"totalPrice\": 300\n    },\n    {\n      \"roomType\": \"D000000057\",\n      \"totalPrice\": 300\n    },\n    {\n      \"roomType\": \"D000000056\",\n      \"totalPrice\": 300\n    },\n    {\n      \"roomType\": \"D000000055\",\n      \"totalPrice\": 300\n    },\n    {\n      \"roomType\": \"D000000054\",\n      \"totalPrice\": 300\n    },\n    {\n      \"roomType\": \"D000000018\",\n      \"totalPrice\": 300\n    },\n    {\n      \"roomType\": \"D000000069\",\n      \"totalPrice\": 300\n    },\n    {\n      \"roomType\": \"D000000020\",\n      \"totalPrice\": 300\n    },\n    {\n      \"roomType\": \"D000000019\",\n      \"totalPrice\": 300\n    },\n    {\n      \"roomType\": \"D000000021\",\n      \"totalPrice\": 300\n    },\n    {\n      \"roomType\": \"D000000022\",\n      \"totalPrice\": 300\n    },\n    {\n      \"roomType\": \"D000000023\",\n      \"totalPrice\": 300\n    },\n    {\n      \"roomType\": \"D000000024\",\n      \"totalPrice\": 300\n    },\n    {\n      \"roomType\": \"D000000025\",\n      \"totalPrice\": 300\n    },\n    {\n      \"roomType\": \"D000000026\",\n      \"totalPrice\": 300\n    },\n    {\n      \"roomType\": \"D000000046\",\n      \"totalPrice\": 300\n    },\n    {\n      \"roomType\": \"D000000047\",\n      \"totalPrice\": 300\n    },\n    {\n      \"roomType\": \"D000000048\",\n      \"totalPrice\": 300\n    },\n    {\n      \"roomType\": \"D000000049\",\n      \"totalPrice\": 300\n    },\n    {\n      \"roomType\": \"D000000050\",\n      \"totalPrice\": 300\n    },\n    {\n      \"roomType\": \"D000000051\",\n      \"totalPrice\": 300\n    },\n    {\n      \"roomType\": \"D000000052\",\n      \"totalPrice\": 300\n    },\n    {\n      \"roomType\": \"D000000053\",\n      \"totalPrice\": 300\n    },\n    {\n      \"roomType\": \"D000000001\",\n      \"totalPrice\": 300\n    },\n    {\n      \"roomType\": \"D000000038\",\n      \"totalPrice\": 300\n    },\n    {\n      \"roomType\": \"D000000039\",\n      \"totalPrice\": 300\n    },\n    {\n      \"roomType\": \"D000000040\",\n      \"totalPrice\": 300\n    },\n    {\n      \"roomType\": \"D000000041\",\n      \"totalPrice\": 300\n    },\n    {\n      \"roomType\": \"D000000042\",\n      \"totalPrice\": 300\n    },\n    {\n      \"roomType\": \"D000000043\",\n      \"totalPrice\": 300\n    },\n    {\n      \"roomType\": \"D000000044\",\n      \"totalPrice\": 300\n    },\n    {\n      \"roomType\": \"D000000045\",\n      \"totalPrice\": 300\n    },\n    {\n      \"roomType\": \"D000000067\",\n      \"totalPrice\": 300\n    },\n    {\n      \"roomType\": \"D000000066\",\n      \"totalPrice\": 300\n    },\n    {\n      \"roomType\": \"D000000065\",\n      \"totalPrice\": 300\n    },\n    {\n      \"roomType\": \"D000000064\",\n      \"totalPrice\": 300\n    },\n    {\n      \"roomType\": \"D000000063\",\n      \"totalPrice\": 300\n    },\n    {\n      \"roomType\": \"D000000068\",\n      \"totalPrice\": 300\n    },\n    {\n      \"roomType\": \"D000000070\",\n      \"totalPrice\": 300\n    },\n    {\n      \"roomType\": \"D000000017\",\n      \"totalPrice\": 300\n    },\n    {\n      \"roomType\": \"D000000016\",\n      \"totalPrice\": 300\n    },\n    {\n      \"roomType\": \"D000000015\",\n      \"totalPrice\": 300\n    },\n    {\n      \"roomType\": \"D000000014\",\n      \"totalPrice\": 300\n    },\n    {\n      \"roomType\": \"D000000013\",\n      \"totalPrice\": 300\n    },\n    {\n      \"roomType\": \"D000000012\",\n      \"totalPrice\": 300\n    },\n    {\n      \"roomType\": \"D000000011\",\n      \"totalPrice\": 300\n    },\n    {\n      \"roomType\": \"D000000010\",\n      \"totalPrice\": 300\n    },\n    {\n      \"roomType\": \"D000000009\",\n      \"totalPrice\": 300\n    },\n    {\n      \"roomType\": \"D000000008\",\n      \"totalPrice\": 300\n    },\n    {\n      \"roomType\": \"D000000007\",\n      \"totalPrice\": 300\n    },\n    {\n      \"roomType\": \"D000000006\",\n      \"totalPrice\": 300\n    },\n    {\n      \"roomType\": \"D000000005\",\n      \"totalPrice\": 300\n    },\n    {\n      \"roomType\": \"D000000004\",\n      \"totalPrice\": 300\n    },\n    {\n      \"roomType\": \"D000000002\",\n      \"totalPrice\": 300\n    }\n  ]\n}"
+				},
+				"url": {
+					"raw": "http://resolve-room-type.dsp-perf2.ose-perf2-red.aws-use1.cloud.marriott.com/v1/shop/Resolve",
+					"protocol": "http",
+					"host": [
+						"resolve-room-type",
+						"dsp-perf2",
+						"ose-perf2-red",
+						"aws-use1",
+						"cloud",
+						"marriott",
+						"com"
+					],
+					"path": [
+						"v1",
+						"shop",
+						"Resolve"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "RCS",
+			"request": {
+				"method": "PUT",
+				"header": [
+					{
+						"key": "Accept",
+						"value": "application/json"
+					},
+					{
+						"key": "Content-Type",
+						"value": "application/json"
+					},
+					{
+						"key": "channelCode",
+						"value": "MC"
+					},
+					{
+						"key": "subChannelCode",
+						"value": "RM"
+					},
+					{
+						"key": "GUIID",
+						"value": "guiid"
+					},
+					{
+						"key": "locale",
+						"value": "en-US"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n  \"type\": \"roomChange\",\n  \"marsha_Code\": \"BOSCO\",\n  \"timeStamp\": \"2018-07-13 T11:02:30.686000Z\",\n  \"marsha_ConfoNo\": \"76762017\",\n  \"pms_AccountNumber\": \"000069\",\n  \"pms_SetUpDate\": \"2018-07-13\",\n  \"arrivalDate\": \"2018-07-13\",\n  \"departureDate\": \"2018-07-20\",\n  \"roomStatus\": \"VR\",\n  \"compositeRoom\": false,\n  \"roomPoolCode\": \"DBDB\",\n  \"roomAssigned\": [\n    \"1010\"\n  ],\n  \"movedFromRoom\": [\n    \"1008\"\n  ]\n}"
+				},
+				"url": {
+					"raw": "http://rcs.dsp-perf2.ose-perf2-red.aws-use1.cloud.marriott.com/v1/room/assign/BOSCO/76762017",
+					"protocol": "http",
+					"host": [
+						"rcs",
+						"dsp-perf2",
+						"ose-perf2-red",
+						"aws-use1",
+						"cloud",
+						"marriott",
+						"com"
+					],
+					"path": [
+						"v1",
+						"room",
+						"assign",
+						"BOSCO",
+						"76762017"
+					]
+				},
+				"description": "http://addon.dsp-int1.ose-nonprod-sldc.marriott.com/v1/shop/roomType/addOns "
+			},
+			"response": []
+		},
+		{
+			"name": "LAR-125PROP",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Accept",
+						"value": "application/json"
+					},
+					{
+						"key": "Content-Type",
+						"value": "application/json"
+					},
+					{
+						"key": "channelCode",
+						"value": "MC"
+					},
+					{
+						"key": "subChannelCode",
+						"value": "RM"
+					},
+					{
+						"key": "GUIID",
+						"value": "dsp321"
+					},
+					{
+						"key": "locale",
+						"value": "en-US"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n\"propertyCodes\":[ \r\n \"WASGW\",\"IADAP\",\"WASCC\",\"IADDS\",\"WASWE\",\"WASJW\",\"WASMC\",\"WASDT\",\"WASCO\",\"WASKB\",\"WASBT\",\"WASSB\",\"WASTC\",\"WASFP\",\"WASWG\",\"IADWF\",\"WASMR\",\"WASBN\",\"WASGB\",\"WASPY\",\"WASRB\",\"WASRW\",\"WASGN\",\"WASAK\",\"WASRT\",\"WASGO\",\"WASPC\",\"WASTY\",\"WASUM\",\"IADCA\",\"WASCT\",\"IADTC\",\"WASNW\",\t\"WASEM\",\"WASCN\",\"WASNY\",\"WASUS\",\"MNZCH\",\"WASFB\",\"WASAL\",\"WASAR\",\"WASPS\",\"IADFO\",\"IADHC\",\"WASLD\",\"WASRV\",\"WASSS\",\"WASGR\",\"WASTN\",\t\"WASSP\",\"WASSV\",\"IADCY\",\"WASCG\",\"WASWD\",\"WASVY\",\"MNZCY\",\"WASFD\",\"WASWB\",\"WASPG\",\"WASWA\",\"WASPT\",\"IADRI\",\"WASDC\",\"WASRI\",\"WASCP\",\t\"WASFG\",\"WASRR\",\"WASDK\",\"WASRA\",\"WASCA\",\"WASRY\",\"WASIN\",\"IADHR\",\"WASTR\",\"WASBR\",\"WASWN\",\"IADXM\",\"WASTO\",\"WASGL\",\"WASRF\",\"WASLV\",\t\"IADFX\",\"MNZRI\",\"WASOK\",\"WASNH\",\"WASWR\",\"IADRF\",\"IADFL\",\"WASPW\",\"WASPR\",\"IADTF\",\"IADTS\",\"WASTS\",\"WASTG\",\"MNZTS\",\"WASAF\",\"WASFT\",\t\"WASSF\",\"WASTL\",\"WASMV\",\"IADDL\",\"WASAX\",\"WASVA\",\"IADSH\",\"WASCV\",\"WASGT\",\"IADFR\",\"WASSW\",\"IADAS\",\"IADFI\",\"IADFC\",\"WASNA\",\"WASFC\",\"WASPM\",\"WASLR\",\"WASLP\",\"MNZFS\",\"WASFR\",\"WASGE\",\"IADST\",\"NYCMQ\",\"NYCWS\",\"NYCEA\",\"NYCEX\",\"NYCBK\"\r\n\r\n],\r\n\"checkInDate\":\"2018-07-18\",\r\n\"checkOutDate\":\"2018-07-23\",\r\n\"numberOfRooms\":\"1\",\r\n\"numberOfGuests\":\"1\",\r\n\"ratePlanType\":[ \r\n\"13.RPT\"\r\n],\r\n\"roomAttributes\":[ \r\n\"\"\r\n],\r\n\"matchingCriteria\":\"\",\r\n\"rewardsProfile\":\r\n{ \"rewardsNumber\":\"\", \"rewardsLevel\":\"\", \"profilePreferences\":[ \"\" ] }\r\n,\r\n\"agent\": [\r\n{ \"type\": \"7\", \"id\": \"\" }\r\n],\r\n\"includeNonDspRates\":false\r\n}"
+				},
+				"url": {
+					"raw": "http://lar.dsp-perf2.ose-perf2-red.aws-use1.cloud.marriott.com/v1/shop/roomProductsLAR",
+					"protocol": "http",
+					"host": [
+						"lar",
+						"dsp-perf2",
+						"ose-perf2-red",
+						"aws-use1",
+						"cloud",
+						"marriott",
+						"com"
+					],
+					"path": [
+						"v1",
+						"shop",
+						"roomProductsLAR"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "LAR-25PROP",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Accept",
+						"value": "application/json"
+					},
+					{
+						"key": "Content-Type",
+						"value": "application/json"
+					},
+					{
+						"key": "channelCode",
+						"value": "MC"
+					},
+					{
+						"key": "subChannelCode",
+						"value": "RM"
+					},
+					{
+						"key": "GUIID",
+						"value": "test211"
+					},
+					{
+						"key": "locale",
+						"value": "en-US"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n\"propertyCodes\":[ \r\n   \"BOSCO\",\"CVGNE\",\"BMIMC\",\"ABEBR\",\"ALBNY\",\"BNACS\",\"ALBBR\",\"ATLAW\",\"DENSA\",\"BOSWF\",\"ATLAG\",\"ATLCP\",\"DTWRM\",\"BWIAP\",\"ATLAK\",\"ATLJW\",\r\n   \"DTWSL\",\"BWIIH\",\"ATLAP\",\"ATLMA\",\"IADDS\",\"BWIWF\",\"ATLEG\",\"ATLMQ\",\"LASST\"\r\n\r\n],\r\n\"checkInDate\":\"2018-07-18\",\r\n\"checkOutDate\":\"2018-07-23\",\r\n\"numberOfRooms\":\"1\",\r\n\"numberOfGuests\":\"1\",\r\n\"ratePlanType\":[ \r\n\"13.RPT\"\r\n],\r\n\"roomAttributes\":[ \r\n\"\"\r\n],\r\n\"matchingCriteria\":\"\",\r\n\"rewardsProfile\":\r\n{ \"rewardsNumber\":\"\", \"rewardsLevel\":\"\", \"profilePreferences\":[ \"\" ] }\r\n,\r\n\"agent\": [\r\n{ \"type\": \"7\", \"id\": \"\" }\r\n],\r\n\"includeNonDspRates\":false\r\n}"
+				},
+				"url": {
+					"raw": "http://lar.dsp-perf2.ose-perf2-red.aws-use1.cloud.marriott.com/v1/shop/roomProductsLAR",
+					"protocol": "http",
+					"host": [
+						"lar",
+						"dsp-perf2",
+						"ose-perf2-red",
+						"aws-use1",
+						"cloud",
+						"marriott",
+						"com"
+					],
+					"path": [
+						"v1",
+						"shop",
+						"roomProductsLAR"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Quote_reservation",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": ""
+				},
+				"url": {
+					"raw": ""
+				}
+			},
+			"response": []
+		}
+	]
+}
